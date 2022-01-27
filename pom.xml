@@ -27,6 +27,23 @@
 	</licenses>
 
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.0.3</version>
+		</dependency>
+
+
+
 		<!--  WICKET DEPENDENCIES -->
 
 		<dependency>
@@ -34,7 +51,7 @@
 			<artifactId>wicket</artifactId>
 			<version>${wicket.version}</version>
 		</dependency>
-		<!-- OPTIONAL 
+		<!-- OPTIONAL
 			<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-extensions</artifactId>
@@ -47,7 +64,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.4.2</version>
+			<version>1.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -114,6 +131,16 @@
 				</excludes>
 			</testResource>
 		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 	<properties>
